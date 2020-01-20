@@ -1,8 +1,10 @@
 \documentclass[a4j,12pt]{jreport}
-\usepackage[dvips]{graphicx}
+%\usepackage[dvips]{graphicx}
+\usepackage[dvipdfmx]{graphicx}%pdfの図を用いるため
 \usepackage{mythesis}
 \usepackage{multirow}
 \usepackage{here}
+\usepackage{url}%urlを使いたい
 \setlength{\itemsep}{-1zh}
 \title{
 公開暗号方式を用いたSSH認証によるアカウント作成の簡略化\\
@@ -53,8 +55,11 @@ SSH authentication using public-key cryptography
 % 基礎概念
 \input{chapter2.tex}
 
-% 実験
+%提案手法
 \input{chapter3.tex}
+
+% 実験
+\input{chapter4.tex}
 
 % 他の論文との比較
 %\input{chapter4.tex}
