@@ -2,8 +2,25 @@
 \label{chap:concept}
 
 \section{認証技術}
+「認証」とは、人やモノ、情報の正当性を証明することであり,人やモノを対象に した認証を「主体認証」\cite{technology-authentication}という.
+主体認証には,「主体の知識による認証」「主体の所有する者による認証」「主体の身体的な特性による認証」の3種類がある.
+主体の知識による認証による代表例は,パスワード認証,パスフレーズ認証,および,PIN(Personal Identification Number)を用いたものである.これらは実装が安易な認証技術であり,多くのITシステムで採用されている\cite{technology-authentication-2}.
+所有するものによる認証では,携行可能な物理的デバイスを利用する.物理的デバイスとしては,ICカードや,ワンタイムパスワードでも利用されるようなハードウェアトークンなどがある\cite{technology-authentication-2}.
+身体的な特性による認証には,利用者の指紋,色彩や生脈パターンなどを用いたものがある.これらをまとめて,バイオメトリクス認証(生体認証)と呼ぶ\cite{technology-authentication-2}.
+
 \section{公開鍵暗号方式}
-\section{公開鍵暗号方式を用いたSSH認証}
+公開鍵暗号方式は,暗号化鍵と複合鍵を別のものとするRSAのような暗号化方式\cite{technology-SSH_authentication}である. 
+秘密鍵から公開鍵を求めることはできるが,公開鍵から秘密鍵を求めることは困難\cite{technology-SSH_authentication}である.
+
+\section{公開鍵暗号方式を用いたSSH認証}%参考文献を追加したい!!!!!!!!!!!!!
+秘密鍵はクライアントが持ち,公開鍵はサーバ側が持つ.
+公開鍵認証によるSSHの流れを次に記述する.
+\textcircled{\scriptsize 1}クライアントがサーバにssh認証をする.
+\textcircled{\scriptsize 2}サーバは公開鍵を用いて,ランダムな値の暗号化を行い,クライアントに送信する.
+\textcircled{\scriptsize 3}クライアントは,送信された暗号化の値を解読し,サーバに送る.
+\textcircled{\scriptsize 4}サーバは,\textcircled{\scriptsize 2}で行った暗号化される前の値と,\textcircled{\scriptsize 3}で送られてきた,解読された値が一致しているか確認する.一致していたら認証成功にし,不一致なら認証失敗にする.
+
+
 
 \section{提案手法の実装で用いた技術}
     \subsection{HyperText Transfer Protocol(HTTP)}
