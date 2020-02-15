@@ -23,12 +23,14 @@
 
 
 \section{提案手法の実装で用いた技術}
-    \subsection{HyperText Transfer Protocol(HTTP)}
-        HTTPについての説明 hogehoge
-        \subsubsection{GETメソッド}
-        \subsubsection{POSTメソッド}
-        % ページが足りなかったら,deleteメソッドとか入れるのあり
-    \subsection{Ruby on Rails}
+    %\subsection{HyperText Transfer Protocol(HTTP)}
+    %    HTTPについての説明 hogehoge
+    %    \subsubsection{GETメソッド}
+    %    \subsubsection{POSTメソッド}
+    %    % ページが足りなかったら,deleteメソッドとか入れるのあり
+    \subsection{Ruby on Rails\cite{Ruby on Rails}}
+    Ruby on RailsはRuby言語で記述された,Web開発フレームワークである.
+    Rubyのライブラリを補助してくれるgemがあり,効率よく開発を進めることができる.
     \subsection{javascript\cite{javascript}}
     javascriptはクライアントサイドである,ブラウザで実行することができる非同期処理なプログラミング言語である.
     DOM(Document Object Model) を用いることにより,HTMLとCSSを操作することができる.
@@ -40,14 +42,27 @@
         \subsubsection{socket.io(モジュール)\cite{socket.io}}% githubのreadmeのところを参考にしよう！
             socket.ioは,通常WebSocketプロトコルを用いてクライアント,サーバ間でリアルタイム双方向通信を可能にするモジュールである.
             現状次のプログラミング言語で用いることができる.「Node.js」「JavaScript」「Java」「C++」「Swift」「Dart」 
-    \subsection{ssh(open-ssh?)}
-    \subsection{websocket}
-    \subsection{cookie}
-    \subsection{セッション}
-        \subsubsection{ステートフル????}
-        \subsubsection{ステートレス????}
-        \subsubsection{一時セッション}% railsチュートリアルから
-        \subsubsection{永続セッション}% railsチュートリアルから
+    \subsection{OpenSSH\cite{OpenSSH}}
+    OpenSSHは世界でもっとも使用されているSSH(安全に通信するためのプロトコル)実装であり,オープンソースである.
+    主な認証方式としては,「パスワード認証」と「公開鍵認証」がある.
+    %\subsection{websocket}
+    \subsection{HTTP cookie\cite{Cookie}}
+        HTTP cookie(Cookie)はウェブサーバとウェブブラウザ間で状態を管理する通信プロトコルである.
+        Cookie により,ブラウザに小さなテキストデータを保存することができる.
+        本来ステートレスなプロトコルであるHTTPに対して,Cookieで状態を管理することによりステートフルなサービスを実現することが可能である.
+
+
+        \subsubsection{ステートレス\cite{state}}
+            ステートレスは,HTTPリクエストに対するHTTPレスポンスが変わらない.
+        \subsubsection{ステートフル\cite{state}}
+            ステートフルは,セッションの状態を保持することにより,
+            HTTPリクエストに対するHTTPレスポンスが変わる.
+
+    \subsection{セッション\cite{session}}
+        セッションにより,コンピュータ間で半永久的な接続を設定できる.
+        セッションを実装する手段として,Cookieを用いることが一般的である.
+        %\subsubsection{一時セッション}% railsチュートリアルから
+        %\subsubsection{永続セッション}% railsチュートリアルから
 % ページ数足りなかったら
 %% html
 %% css
