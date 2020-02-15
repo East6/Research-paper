@@ -1,1 +1,21 @@
 \chapter{今後の課題}
+
+この章では,鍵方式の実装・検証について，今後の課題を列挙し,説明をする.\\
+以下に,今後の課題を列挙する.
+\begin{itemize}
+    \item セキュリティの脆弱性の改善
+    \begin{itemize}
+        \item http通信を行なっていることの改善
+        \item 秘密鍵を通信していることの改善
+        \item CSRFトークンOFF\cite{CSRF-token}した上での実装
+    \end{itemize}
+    \item 利用者視点で使いやすいようにする
+        \begin{itemize} 
+            \item 鍵を紛失した時の再発行をできるようにする
+            \item 鍵の管理を行いやすいようにする
+            \item 鍵方式を知らない人でも使えるようにようにする
+    \end{itemize}
+    \item 鍵方式の登録・認証がセキュアな上での検証を行う.
+
+\end{itemize}
+
