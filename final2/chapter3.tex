@@ -101,7 +101,7 @@ Railsチュートリアルのサイト\cite{Rails tutorial}を参考に最低限
 
 %gitlubのURL載せる???
 
-\section{ボツ案}
+\section{実験失敗案}
 \subsection{ログイン状態のセッション橋渡し}
 \noindent 実装したいこと\\
 公開鍵暗号方式によるssh認証を成功した際に，WEBサービスでログイン状態になる.
@@ -179,9 +179,9 @@ HTTPリクエストをする際に,新しいCookie情報が付与されること
     \label{botu1-2.pdf}
 \end{figure}
 \\
-図\ref{botu1-2.pdf}の\textcircled{\scriptsize 5} で,railsではセッションを発行する際に,http-only属性を付与している\cite{cookie-httponly-default}.そのことは，ログイン時のHTTPレスポンスである図\ref{login-1}でも現れている.
+図\ref{botu1-2.pdf}の\textcircled{\scriptsize 5} で,Railsではセッションを発行する際に,http-only属性を付与している\cite{cookie-httponly-default}.そのことは，ログイン時のHTTPレスポンスである図\ref{login-1}でも現れている.
 http-only属性がついたCookieは,javascriptで扱うことができなくなり，セッションハイジャックの対策を行っている\cite{cookie-httponly-security}.
-そのため,図\ref{botu1-2.pdf}の\textcircled{\scriptsize 7}のように,セッション状態を保存することができなかったため，「ログイン状態のセッション橋渡し」の案はボツになった.
+そのため,図\ref{botu1-2.pdf}の\textcircled{\scriptsize 7}のように,セッション状態を保存することができなかったため，「ログイン状態のセッション橋渡し」の案はお蔵入りになった.
 %
 %
 %図を用いながら，できない説明。
